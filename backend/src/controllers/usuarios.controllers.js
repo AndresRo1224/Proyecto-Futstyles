@@ -5,6 +5,7 @@ import getConnection from "../db/database.js";
 export const registrarUsuario = async (req, res) => {
   const { nombre, usuario, contrasena } = req.body;
 
+  // Validar que todos los campos estén presentes
   if (!nombre || !usuario || !contrasena) {
     return res.status(400).json({ success: false, message: "Todos los campos son obligatorios" });
   }
@@ -42,6 +43,7 @@ export const registrarUsuario = async (req, res) => {
 export const iniciarSesion = async (req, res) => {
   const { usuario, contrasena } = req.body;
 
+  // Validar que todos los campos estén presentes
   if (!usuario || !contrasena) {
     return res.status(400).json({ success: false, message: "Todos los campos son obligatorios" });
   }
