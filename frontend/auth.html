@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FutStyles | Iniciar Sesión o Registrarse</title>
+  <link rel="stylesheet" href="css/auth.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="container">
+    <!-- Formulario de registro -->
+    <div class="form-box" id="register-box">
+      <h2><i class="fas fa-user-plus"></i> Registrarse</h2>
+      <form id="registerForm">
+        <input type="text" id="registerName" placeholder="Nombre completo" required>
+        <input type="text" id="registerUser" placeholder="Nombre de usuario" required>
+        <input type="password" id="registerPassword" placeholder="Contraseña" required>
+        <button type="submit">Crear Cuenta</button>
+        <p>¿Ya tienes una cuenta? <span class="switch" onclick="toggleForm()">Inicia sesión</span></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Función para alternar entre los formularios de inicio de sesión y registro
+    function toggleForm() {
+      document.getElementById('login-box').classList.toggle('hidden');
+      document.getElementById('register-box').classList.toggle('hidden');
+    }
+  </script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
