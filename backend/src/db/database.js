@@ -1,4 +1,4 @@
-import mysql from "promise-mysql";
+import mysql from "mysql2/promise.js";
 
 import config from "../config.js";
 
