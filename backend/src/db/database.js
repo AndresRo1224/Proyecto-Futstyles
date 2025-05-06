@@ -11,6 +11,7 @@ const getConnection = async () => {
       password: config.password,
       database: config.database,
     });
+    console.log("Conectado a la base de datos");
   }
   return connection;
 };
